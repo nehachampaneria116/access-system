@@ -1,0 +1,28 @@
+type User {
+  id: Int!
+  username: String!
+  email: String!
+  password: String!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type AuthPayload {
+  user: User!
+  accessToken: String!
+  refreshToken: String!
+}
+
+extend type Query {
+  getLoggedInUser: User!
+  getAllUsers: [User!]!
+  user(id: Int!): User
+}
+
+extend type Mutation {
+  signUp(username: String!, email: String!, password: String!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+  refreshToken(refreshToken: String!): AuthPayload!
+  updateUserInfo(id: Int!, username: String, email: String): User!
+  deleteUser(id: Int!): Boolean!
+}

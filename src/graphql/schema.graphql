@@ -1,0 +1,11 @@
+type Query {
+  _empty: String
+}
+
+type Mutation {
+  _empty: String
+}
+
+# Import User module schemas
+#import "../modules/users/schema.graphql"
+
