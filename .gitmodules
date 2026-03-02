@@ -1,3 +1,6 @@
 [submodule "src/schema"]
 	path = src/schema
 	url = git@github.com:nehachampaneria116/approval-system-schema.git
+[submodule "src/shared-lib"]
+	path = src/shared-lib
+	url = git@github.com:nehachampaneria116/approval-system-shared-lib.git
